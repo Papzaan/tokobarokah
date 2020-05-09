@@ -1,13 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Viga&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: #888888;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+	background-color: #00c800;
+	position: fixed;
 }
+
+.abrand {
+	color: white;
+	font-size: 115%;
+	font-family: Viga;
+}
+
+.navbar-nav > a {
+	color: black;
+	font-family: Viga;
+	font-size: 108%;
+	float: right;
+}
+
+.navbar-nav > a:hover {
+	color: white;
+	font-family: Viga;
+}
+
+.navbar-nav >a.navbar-nav-active {
+	color: white;
+	text-decoration: underline;
+	font-family: Viga;
+}
+
+.navcart {
+	width: 8%;
+	float: right;
+}
+
+.jumbohome {
+	background-image: url('./assets/banner3.png');
+	background-size: cover;
+	height: 95vh;
+}
+
+
+
+
+
