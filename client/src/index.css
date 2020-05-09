@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Patrick+Hand&display=swap');
 
 body {
   
-  background-color: #888888;
+  background-color: #a9c4b0;
   
 }
 
 nav {
-	background-color: #00c800;
+	background-color: #00b14f;
 	position: fixed;
 }
 
 .abrand {
-	color: white;
+	color: black;
 	font-size: 115%;
 	font-family: Viga;
 }
@@ -46,7 +47,98 @@ nav {
 	height: 95vh;
 }
 
+.judul_about {
+	font-family: Viga;
+	color: black;
+	text-align: center;
+	margin-top: 1%;
+}
+
+hr {
+	width: 20%;
+	border-top: 3px solid black;
+	margin-bottom: 5%;
+}
 
 
+.txtabout{
+ font-family: Patrick Hand;
+ color: black;
+ text-align: center;
+ font-weight: bold;
+ font-size: 20px;
+ word-spacing: 7px;
+ letter-spacing: 1px;
+ margin-bottom: 7%;
+}
+
+.halal{
+	padding-top: 4%;
+	width: 32%;
+	height: 22vh;
+	float: right;
+}
+
+.kualitas{
+	width: 40%;
+	height: 25vh;
+	float: left;
+
+}
+
+.murah{
+	padding-top: 5%;
+	width: 34%;
+	height: 23vh;
+	display: block;
+	margin: auto;
+}
+
+.pLabel1 {
+	 font-family: Patrick Hand;
+	 color: black;
+	 float: right;
+	 font-weight: bold;
+	 font-size: 25px;
+	 margin-bottom: 7%;
+	 margin-right: 3%;
+}
+.pLabel2 {
+	 font-family: Patrick Hand;
+	 color: black;
+	 text-align: center;
+	 font-weight: bold;
+	 font-size: 25px;
+	 margin-bottom: 10%;
+}
+.pLabel3 {
+	 font-family: Patrick Hand;
+	 color: black;
+	 text-align: left;
+	 font-weight: bold;
+	 font-size: 25px;
+	 margin-bottom: 10%;
+
+}
+
+
+
+.footer {
+	background-color: #00b14f;
+}
+
+.pFooter {
+	font-family: Patrick Hand;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	word-spacing: 5px;
+}
+.pFooter > a {
+	color: black;
+}
 
 
