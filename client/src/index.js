@@ -6,6 +6,7 @@ import Product from './components/product';
 import Contact from './components/contact';
 import About from './components/about';
 import Navigation from './components/navbar'
+import Footer from './components/footer'
 import Cart from './components/my_cart'
 
 import * as serviceWorker from './serviceWorker';
@@ -24,6 +25,8 @@ ReactDOM.render(
 		<Route exact path="/contact" component={Contact} />
 		<Route exact path="/about" component={About} />
 		<Route exact path="/my_cart" component={Cart} />
+
+		<Footer/>
 	
 	</Router>
 ,
