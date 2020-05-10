@@ -1,27 +1,37 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'
 import {Jumbotron} from 'react-bootstrap'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Pagination, Container, Row, Col, Card, Form, FormControl} from 'react-bootstrap'
 import banner from '../assets/banner2.png'
 import halal from '../assets/halal.png'
 import kualitas from '../assets/kualitas.png'
 import murah from '../assets/murah.png'
-
+import sukari from '../assets/sukari.png'
+import habbat from '../assets/habbat.png'
+import almond from '../assets/almond.jpg'
+import himalaya from '../assets/himalaya.png'
+import oil from '../assets/olive oil.jpg'
+import madu from '../assets/madusarang.jpg'
+import ajwa from '../assets/kurmaajwa.png'
+import kismis from '../assets/kismis.png'
 
 class Home extends React.Component {
 
 	render(){
 		return ( 
 			<>
+			{/* Start jumbotron*/}
 
-			<Jumbotron className="jumbohome">
-			  
-			</Jumbotron>
+			<Jumbotron className="jumbohome"></Jumbotron>
+			
+			{/* End Jumbotron*/}
 
-			<Container fluid>
+			{/* Start About*/}
+
+			<Container className="aboutContain" id="about">
 			  <Row className="row">
 			    <Col className="col">
-				    <h2 className="judul_about center" >
+				    <h2 className="judulPage" >
 				    	About Us
 				    </h2>
 				    <hr/>
@@ -29,12 +39,7 @@ class Home extends React.Component {
 			  </Row>
 
 			  <Row className="row">
-			    <Col className="col" sm={2}>
-			    {/* 
-			    	
-			     */}
-
-			    </Col>
+			    <Col className="col" sm={2}></Col>
 			    <Col className="col" sm={8}>
 			    	<p className="txtabout">
 			    		Toko barokah merupakan e-commerce yang dibangun pada tahun 2020, oleh 3 orang mahasiswa Institut Teknologi Sumatera 
@@ -48,9 +53,7 @@ class Home extends React.Component {
 			    </Col>
 			    <Col className="col" sm={2}></Col>
 			  </Row>
-			</Container>
-
-			<Container fluid>
+			
 			  <Row className="row" sm={6}>
 
 			    <Col className="col" sm={4}>
@@ -90,6 +93,188 @@ class Home extends React.Component {
 			  </Row>
 
 			</Container>
+
+			{/* End About*/}
+
+			{/* Start Product*/}
+
+			<Container className="productContain">
+
+			  <Row className="row">
+			  	<Col>
+			  		<h2 className="judulPage" >
+				    	Our Product
+				    </h2>
+				    <hr/>
+			  	</Col>
+			  </Row>
+
+			  <Row className="row">
+			  	<Col>
+					<Form inline className="formSearch">
+					   	<FormControl type="text" placeholder="Input Product" className="mr-sm-2" />
+					    <Button className="btnSearch">Search</Button>
+					</Form>
+			  	</Col>
+			  </Row>
+
+
+			  <Row className="row">
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={almond} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Kacang Almond 1 kg</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp120.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={himalaya} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Garam Himalaya</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp40.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={habbat} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Habbatussauda 120 Kapsul</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp30.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={kismis} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Kismis Gold 1 Kg</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp70.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			  </Row>
+
+			  <Row className="row">
+
+			  	<Col>
+			      <Card className="cardI">
+				      <Card.Img src={oil} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Bertoli Extra Virgin Olive Oil 500 ml</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp80.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={madu} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Madu Sarang 500 gr</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp90.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={sukari} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Kurma Sukari 1 Kg</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp50.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			    <Col>
+			      <Card className="cardI">
+				      <Card.Img src={ajwa} className="cardImg" />
+					  <Card.Body className="cardItem">
+					      <Card.Title className="cardTitle">Kurma Ajwa 1 Kg</Card.Title>
+					      <Card.Text className="cardHarga">
+					        Rp200.000
+					      </Card.Text>
+					   </Card.Body>
+					   <Card.Footer className="cardFoot">
+					     <small className="text-muted">Last updated 3 mins ago</small>
+					   </Card.Footer>
+				   </Card>
+			    </Col>
+
+			  </Row>
+
+				<Row className="row">
+				  	<Col>
+				  		
+				  		<Pagination className="classPagin justify-content-center">
+						  <Pagination.First />
+						  <Pagination.Prev />
+						  <Pagination.Item>{1}</Pagination.Item>
+						  <Pagination.Ellipsis />
+
+						  <Pagination.Item>{10}</Pagination.Item>
+						  <Pagination.Item>{11}</Pagination.Item>
+						  <Pagination.Item active>{12}</Pagination.Item>
+						  <Pagination.Item>{13}</Pagination.Item>
+						  <Pagination.Item disabled>{14}</Pagination.Item>
+
+						  <Pagination.Ellipsis />
+						  <Pagination.Item>{20}</Pagination.Item>
+						  <Pagination.Next />
+						  <Pagination.Last />
+						</Pagination>
+
+				  	</Col>
+				</Row>
+
+			</Container>
+
+		{/* End Product */}
+
 
 
 			</>
