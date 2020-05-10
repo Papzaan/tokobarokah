@@ -1,10 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const app = express();
+const cors = require("cors");
+require("dotenv").config();
 const db = require("./config").mongoURI;
-const users = require("./routes/index");
-const path = require('path');
+
+// set up express
+
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 // Koknek ke MongoDB
 mongoose
@@ -12,13 +16,9 @@ mongoose
     .then(() => console.log("mongoDB Connected"))
     .catch((err) => console.log(err));
 
-app.use(bodyParser.urlencoded({extended : false}));
-app.use(bodyParser.json());
-
 //routes
 app.use(express.static('public'))
-app.use('/api/',users);
-
+app.use("/users", require("./routes/user"));
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log("server running on port "+port));
