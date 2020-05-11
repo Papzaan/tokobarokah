@@ -56,10 +56,10 @@ router.post("/login", async (req, res) => {
     if (!user)
       return res
         .status(400)
-        .json({ msg: "Auth failed, email not found." });
+        .json({ msg: "No account with this email has been registered." });
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ msg: "Wrong password." });
+    if (!isMatch) return res.status(400).json({ msg: "Invalid credentials." });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     res.json({
@@ -101,17 +101,16 @@ router.post("/tokenIsValid", async (req, res) => {
   }
 });
 
-router.get("/auth", auth, (req, res) => {
-  res.status(200).json({
-      _id: req.user._id,
-      isAdmin: req.user.role === 0 ? false : true,
-      isAuth: true,
-      email: req.user.email,
-      name: req.user.name,
-      role: req.user.role,
-      cart: req.user.cart,
+router.get("/", auth, async (req, res) => {
+  const user = await User.findById(req.user);
+  res.json({
+    displayName: user.displayName,
+    id: user._id,
   });
 });
 
+router.get("/test", (req, res) => {
+  res.send("Hello, it's working");
+});
 
 module.exports = router;
