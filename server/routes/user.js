@@ -6,7 +6,7 @@ const User = require("../models/user.model");
 
 router.post("/register", async (req, res) => {
   try {
-    let { email, password, passwordCheck, displayName } = req.body;
+    let { email, password, passwordCheck, name, role } = req.body;
 
     // validate
 
@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
         .status(400)
         .json({ msg: "An account with this email already exists." });
 
-    if (!displayName) displayName = email;
+    if (!name) name = email;
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
@@ -35,7 +35,8 @@ router.post("/register", async (req, res) => {
     const newUser = new User({
       email,
       password: passwordHash,
-      displayName,
+      name,
+      role,
     });
     const savedUser = await newUser.save();
     res.json(savedUser);
@@ -67,7 +68,8 @@ router.post("/login", async (req, res) => {
       user: {
         id: user._id,
         displayName: user.displayName,
-        email: user.email
+        email: user.email,
+        role: user.role
       },
     });
   } catch (err) {
@@ -75,14 +77,14 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.delete("/delete", auth, async (req, res) => {
-  try {
-    const deletedUser = await User.findByIdAndDelete(req.user);
-    res.json(deletedUser);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+    router.delete("/delete", auth, async (req, res) => {
+      try {
+        const deletedUser = await User.findByIdAndDelete(req.user);
+        res.json(deletedUser);
+      } catch (err) {
+        res.status(500).json({ error: err.message });
+      }
+    });
 
 router.post("/tokenIsValid", async (req, res) => {
   try {
@@ -101,11 +103,16 @@ router.post("/tokenIsValid", async (req, res) => {
   }
 });
 
-router.get("/", auth, async (req, res) => {
-  const user = await User.findById(req.user);
-  res.json({
-    displayName: user.displayName,
-    id: user._id,
+router.get("/auth", auth, (req, res) => {
+  res.status(200).json({
+      _id: req.user._id,
+      isAdmin: req.user.role === 0 ? false : true,
+      isAuth: true,
+      email: req.user.email,
+      name: req.user.name,
+      role: req.user.role,
+      cart: req.user.cart
+
   });
 });
 
