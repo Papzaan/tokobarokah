@@ -19,6 +19,7 @@ mongoose
 //routes
 app.use(express.static('public'))
 app.use("/users", require("./routes/user"));
+app.use("/product", require("./routes/product"));
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log("server running on port "+port));
