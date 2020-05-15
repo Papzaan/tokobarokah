@@ -23,11 +23,6 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single("file")
 
-
-//=================================
-//             Product
-//=================================
-
 router.post("/uploadImage", auth, (req, res) => {
 
     upload(req, res, err => {
@@ -42,7 +37,7 @@ router.post("/uploadImage", auth, (req, res) => {
 
 router.post("/uploadProduct", auth, (req, res) => {
 
-    //save all the data we got from the client into the DB 
+    //Tambah Produk Ke DB 
     const product = new Product(req.body)
 
     product.save((err) => {
@@ -105,8 +100,6 @@ router.post("/getProducts", (req, res) => {
 });
 
 
-//?id=${productId}&type=single
-//id=12121212,121212,1212121   type=array 
 router.get("/products_by_id", (req, res) => {
     let type = req.query.type
     let productIds = req.query.id
@@ -132,7 +125,5 @@ router.get("/products_by_id", (req, res) => {
             return res.status(200).send(product)
         })
 });
-
-
 
 module.exports = router;
