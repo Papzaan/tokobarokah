@@ -2,6 +2,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 import {Jumbotron} from 'react-bootstrap'
 import {Pagination, Container, Row, Col, Card, Form, FormControl} from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
 import banner from '../assets/banner2.png'
 import halal from '../assets/halal.png'
 import kualitas from '../assets/kualitas.png'
@@ -14,6 +16,7 @@ import oil from '../assets/olive oil.jpg'
 import madu from '../assets/madusarang.jpg'
 import ajwa from '../assets/kurmaajwa.png'
 import kismis from '../assets/kismis.png'
+import StarRating from './StarRating'
 
 class Home extends React.Component {
 
@@ -34,13 +37,12 @@ class Home extends React.Component {
 				    <h2 className="judulPage" >
 				    	About Us
 				    </h2>
-				    <hr/>
+				    <hr className="hrJudul"/>
 			    </Col>
 			  </Row>
 
 			  <Row className="row">
-			    <Col className="col" sm={2}></Col>
-			    <Col className="col" sm={8}>
+			    <Col className="col">
 			    	<p className="txtabout">
 			    		Toko barokah merupakan e-commerce yang dibangun pada tahun 2020, oleh 3 orang mahasiswa Institut Teknologi Sumatera 
 			    		(ITERA) dari program studi Teknik Informatika. Kami menjual berbagai produk atau makanan sehat dengan harga yang 
@@ -51,61 +53,22 @@ class Home extends React.Component {
 			    		kami sediakan. Thank you and happy shopping!
 			    	</p>
 			    </Col>
-			    <Col className="col" sm={2}></Col>
 			  </Row>
 			
-			  <Row className="row" sm={6}>
-
-			    <Col className="col" sm={4}>
-				    <img className="halal" src={halal}/>
-				</Col>
-
-			    <Col className="col" sm={4}>
-				    <img className="murah" src={murah}/>
-			    </Col>
-
-			    <Col className="col" sm={4}>
-				    <img className="kualitas" src={kualitas}/>
-			    </Col>
-			    
-			  </Row>
-
-			  <Row className="row" sm={6}>
-
-			    <Col className="col" sm={4}>
-				    <p className="pLabel1">
-				    	Produk Halal
-				    </p>
-				</Col>
-
-			    <Col className="col" sm={4}>
-				    <p className="pLabel2">
-				    	Produk Terjangkau
-				    </p>
-			    </Col>
-
-			    <Col className="col" sm={4}>
-				    <p className="pLabel3">
-				    	Produk Berkualitas
-				    </p>
-			    </Col>
-			    
-			  </Row>
-
 			</Container>
 
 			{/* End About*/}
 
 			{/* Start Product*/}
 
-			<Container className="productContain">
+			<Container className="productContain" id="product">
 
-			  <Row className="row">
+			  <Row className="row" >
 			  	<Col>
 			  		<h2 className="judulPage" >
 				    	Our Product
 				    </h2>
-				    <hr/>
+				    <hr className="hrJudul"/>
 			  	</Col>
 			  </Row>
 
@@ -121,62 +84,143 @@ class Home extends React.Component {
 
 			  <Row className="row">
 
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={almond} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Kacang Almond 1 kg</Card.Title>
+					      <Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Kacang Almond 1 kg
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp120.000
+					        <p>
+					        	Rp120.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
+
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					   		<Row>
+					        	<Col sm={3}>
+					        		<a className="cartplus" href="https://www.w3schools.com">
+								   	  <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								   	</a>
+					        	</Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					        </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
 
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={himalaya} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Garam Himalaya</Card.Title>
+					  	<Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Garam Himalaya 1 Kg
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp40.000
+					        <p>
+					        	Rp40.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
+
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					    <Row>
+					        <Col sm={3}>
+					        	<a className="cartplus" href="https://www.w3schools.com">
+								   <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								</a>
+					        </Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					    </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
 
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={habbat} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Habbatussauda 120 Kapsul</Card.Title>
+					  	<Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Habbatussauda 120 Kapsul
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp30.000
-					      </Card.Text>
-					   </Card.Body>
-					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
-					   </Card.Footer>
-				   </Card>
-			    </Col>
+					        <p>
+					        	Rp30.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
 
-			    <Col>
-			      <Card className="cardI">
-				      <Card.Img src={kismis} className="cardImg" />
-					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Kismis Gold 1 Kg</Card.Title>
-					      <Card.Text className="cardHarga">
-					        Rp70.000
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					   		<Row>
+					        	<Col sm={3}>
+					        		<a className="cartplus" href="https://www.w3schools.com">
+								   	  <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								   	</a>
+					        	</Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					        </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
@@ -185,62 +229,143 @@ class Home extends React.Component {
 
 			  <Row className="row">
 
-			  	<Col>
-			      <Card className="cardI">
-				      <Card.Img src={oil} className="cardImg" />
-					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Bertoli Extra Virgin Olive Oil 500 ml</Card.Title>
-					      <Card.Text className="cardHarga">
-					        Rp80.000
-					      </Card.Text>
-					   </Card.Body>
-					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
-					   </Card.Footer>
-				   </Card>
-			    </Col>
-
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={madu} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Madu Sarang 500 gr</Card.Title>
+					  	<Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Madu Sarang 500 gr
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp90.000
+					        <p>
+					        	Rp90.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
+
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					     <Row>
+					        	<Col sm={3}>
+					        		<a className="cartplus" href="https://www.w3schools.com">
+								   	  <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								   	</a>
+					        	</Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					     </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
 
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={sukari} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Kurma Sukari 1 Kg</Card.Title>
+					  	<Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Kurma Sukari 1 Kg
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp50.000
+					        <p>
+					        	Rp50.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
+
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					    <Row>
+					        	<Col sm={3}>
+					        		<a className="cartplus" href="https://www.w3schools.com">
+								   	  <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								   	</a>
+					        	</Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					    </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
 
-			    <Col>
+			    <Col lg={4}>
 			      <Card className="cardI">
 				      <Card.Img src={ajwa} className="cardImg" />
 					  <Card.Body className="cardItem">
-					      <Card.Title className="cardTitle">Kurma Ajwa 1 Kg</Card.Title>
+					  	<Card.Title>
+					      <h3 className="cardTitle"> 
+					      	Kurma Ajwa 1 Kg
+					      </h3>
+					      </Card.Title>
 					      <Card.Text className="cardHarga">
-					        Rp200.000
+					        <p>
+					        	Rp200.000
+					        </p>
+					        <Row>
+					        	<Col className="stock">
+					        		Stok
+					        	</Col>
+
+					        	<Col>
+					        		<p className="Tstok">
+					        			50
+					        		</p>
+					        	</Col>
+					        </Row>
+					        <Row>
+					        	<Col>
+					        	<StarRating/>
+					        	</Col>
+					        </Row>
 					      </Card.Text>
 					   </Card.Body>
 					   <Card.Footer className="cardFoot">
-					     <small className="text-muted">Last updated 3 mins ago</small>
+					    	<Row>
+					        	<Col sm={3}>
+					        		<a className="cartplus" href="https://www.w3schools.com">
+								   	  <FontAwesomeIcon icon={faCartPlus} size="2x"/>
+								   	</a>
+					        	</Col>
+
+					        	<Col sm={9}>
+					     			<Button className="btnPesan">Beli Sekarang</Button>
+					        	</Col>
+					        </Row>
 					   </Card.Footer>
 				   </Card>
 			    </Col>
