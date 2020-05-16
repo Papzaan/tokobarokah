@@ -8,24 +8,26 @@ class AdminAddBarang extends React.Component {
 		return ( 
 			<>
 			<Container className="AddBrg" id="id_formbrg">
+				
 				<Row className="row">
 					<Col className="col" sm={2}></Col>
 						<Col className="col" sm={8}>
-							<hr/>
-							<hr/><hr/>
-							<hr/>				
+							<br/>
+							<br/>
+							<br/>
+							<br/><br/>
 				<Row className="row">
 				    <Col className="col">
 					    <h2 className="Inputbrg" >
 					    	Input Barang
 					    </h2>
-					    <hr className="hrContact"/>
+					    <hr className="hrbarang"/>
 				    </Col>
 				</Row>
-
+				
 				<Form className="namabrg">
-				 	<Form.Group as={Row} controlId="namabrg">
-					    <Form.Label column md={2} className="labelnama">
+				 	<Form.Group as={Row} controlId="cardTitle">
+					    <Form.Label column md={5} className="labelnama">
 					      Nama Barang
 					    </Form.Label>
 					    <Col md={4}>
@@ -33,8 +35,8 @@ class AdminAddBarang extends React.Component {
 					    </Col>
 					</Form.Group>
 
-					<Form.Group as={Row} controlId="hrgbrg">
-					    <Form.Label column md={2} className="labelhrg">
+					<Form.Group as={Row} controlId="cardHarga">
+					    <Form.Label column md={5} className="labelhrg">
 					      Harga Barang
 					    </Form.Label>
 					    <Col md={4}>
@@ -42,8 +44,8 @@ class AdminAddBarang extends React.Component {
 					    </Col>
 					</Form.Group>
 
-					<Form.Group as={Row} controlId="jmbrg">
-					    <Form.Label column md={2} className="labeljm">
+					<Form.Group as={Row} controlId="cardItem">
+					    <Form.Label column md={5} className="labeljm">
 					      Jumlah Barang
 					    </Form.Label>
 					    <Col md={4}>
@@ -51,8 +53,8 @@ class AdminAddBarang extends React.Component {
 					    </Col>
 					</Form.Group>
 					
-					<Form.Group as={Row} controlId="imgbrg">
-					    <Form.Label column md={2} className="labelimg">
+					<Form.Group as={Row} controlId="cardImg">
+					    <Form.Label column md={5} className="labelimg">
 					      Masukan Gambar Barang
 					    </Form.Label>
 					    <Col md={4}>
@@ -69,6 +71,7 @@ class AdminAddBarang extends React.Component {
 							</Col>
 					<Col className="col" sm={2}></Col>
 				</Row>
+				
             </Container>
 			</>
 		)

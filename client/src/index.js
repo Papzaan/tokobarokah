@@ -10,6 +10,7 @@ import Footer from './components/footer'
 import Cart from './components/my_cart'
 import AdminBarang from './components/roboti/AdminBarang'
 import AdminAddBarang from './components/roboti/AdminAddBarang'
+import AdminEditbrg from './components/roboti/AdminEditBrg'
 
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
@@ -29,6 +30,7 @@ ReactDOM.render(
 		<Route exact path="/my_cart" component={Cart} />
 		<Route exact path="/roboti/AdminBarang" component={AdminBarang} />
 		<Route exact path="/roboti/AdminAddBarang" component={AdminAddBarang} />
+		<Route exact path="/roboti/AdminEditbrg" component={AdminEditbrg} />
 
 		<Footer/>
 	

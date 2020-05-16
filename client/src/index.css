@@ -301,7 +301,11 @@ input[type="radio"] {
 	border-top: 3px solid #555;
 	width: 510px;
 }
-
+.hrbarang {
+	float: left;
+	border-top: 3px solid #555;
+	width: 600px;
+}
 .labelContact{
 	font-family: Patrick Hand;
 	color: black;
