@@ -28,20 +28,20 @@ class Contact extends React.Component {
 
 					   <Card className="cardTeam">
 					      <Card.Img src={aan} className="imgTeam" />
-						  <Card.Body className="cardItem">
+						  <Card.Body className="bodyTeam">
 						      <Card.Title className="titleTeam">Aan Sanova</Card.Title>
 						      <Card.Text className="infoTeam">
 						        <h4> Back End Developer </h4>
 						      </Card.Text>
 						   </Card.Body>
 						   <Card.Footer className="footTeam">
-						     <a className="iconIg" href="https://www.w3schools.com">
+						     <a className="iconIg" href="http://instagram.com/aansanova">
 						   	  	<FontAwesomeIcon icon={faInstagram} size="2x"/>
 						   	  </a>
-						   	  <a className="iconLinked" href="https://www.w3schools.com">
+						   	  <a className="iconLinked" href="https://www.linkedin.com/in/aan-sanova-6a7b93109">
 						      	<FontAwesomeIcon icon={faLinkedin} size="2x" />
 						   	  </a>
-						   	  <a className="iconGit" href="https://www.w3schools.com">   	  	
+						   	  <a className="iconGit" href="https://github.com/Papzaan">   	  	
 						      	<FontAwesomeIcon icon={faGithub} size="2x" />
 						   	  </a>
 						   </Card.Footer>
@@ -53,20 +53,20 @@ class Contact extends React.Component {
 				    	
 					   <Card className="cardTeam">
 					      <Card.Img src={hanif} className="imgTeam" />
-						  <Card.Body className="cardItem">
+						  <Card.Body className="bodyTeam">
 						      <Card.Title className="titleTeam">Hanif Abdillah</Card.Title>
 						      <Card.Text className="infoTeam">
 						        <h4> Front End Developer </h4>
 						      </Card.Text>
 						   </Card.Body>
 						   <Card.Footer className="footTeam">
-						      <a className="iconIg" href="https://www.w3schools.com">
+						      <a className="iconIg" href="http://instagram.com/hanifabdi_30">
 						   	  	<FontAwesomeIcon icon={faInstagram} size="2x"/>
 						   	  </a>
-						   	  <a className="iconLinked" href="https://www.w3schools.com">
+						   	  <a className="iconLinked" href="https://www.linkedin.com/in/hanifabdillah30">
 						      	<FontAwesomeIcon icon={faLinkedin} size="2x" />
 						   	  </a>
-						   	  <a className="iconGit" href="https://www.w3schools.com">   	  	
+						   	  <a className="iconGit" href="https://github.com/hanifabdi">   	  	
 						      	<FontAwesomeIcon icon={faGithub} size="2x" />
 						   	  </a>
 						   </Card.Footer>
@@ -78,20 +78,20 @@ class Contact extends React.Component {
 				    	
 				       <Card className="cardTeam">
 					      <Card.Img src={mahesa} className="imgTeam" />
-						  <Card.Body className="cardItem">
+						  <Card.Body className="bodyTeam">
 						      <Card.Title className="titleTeam">Mahesa Darma</Card.Title>
 						      <Card.Text className="infoTeam">
 						        <h4> Database Administrator </h4>
 						      </Card.Text>
 						   </Card.Body>
 						   <Card.Footer className="footTeam">
-						   	  <a className="iconIg" href="https://www.w3schools.com">
+						   	  <a className="iconIg" href="http://instagram.com/sipitchan_">
 						   	  	<FontAwesomeIcon icon={faInstagram} size="2x"/>
 						   	  </a>
-						   	  <a className="iconLinked" href="https://www.w3schools.com">
+						   	  <a className="iconLinked" href="https://www.linkedin.com/in/mahesa-darma-satria">
 						      	<FontAwesomeIcon icon={faLinkedin} size="2x" />
 						   	  </a>
-						   	  <a className="iconGit" href="https://www.w3schools.com">   	  	
+						   	  <a className="iconGit" href="https://github.com/MahesaDS2408/">   	  	
 						      	<FontAwesomeIcon icon={faGithub} size="2x" />
 						   	  </a>
 						   </Card.Footer>

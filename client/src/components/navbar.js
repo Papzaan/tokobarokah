@@ -11,12 +11,12 @@ class Navigation extends React.Component {
 	render () {
 		return ( 
 			<>
-			<Navbar>
-				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
-				<Navbar.Collapse id="basic-navbar-nav">
+			<Navbar expand="lg">
 			    <Navbar.Brand href="#">
 			      <a className="abrand" href="/">Toko Barokah</a>
 			    </Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse id="basic-navbar-nav">
 			    <Nav className="ml-auto">
 
 			    	<NavLink className="mr-sm-4 p-2 " exact to="/" activeClassName="navbar-nav-active"> Home </NavLink>
@@ -31,6 +31,7 @@ class Navigation extends React.Component {
 			    </Navbar.Collapse>
 
 		  	</Navbar>
+			    
 			</>
 		)
 	}
