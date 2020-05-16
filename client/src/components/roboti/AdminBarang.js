@@ -8,12 +8,12 @@ class AdminBarang extends React.Component {
 		return ( 
 			<>
 			<Container className="ListBarang" id="barang">
-                <Row className="row">
+                {/* <Row className="row">
 			        <Col className="col">
 						<hr/>
 				        <hr/>
 			        </Col>
-			    </Row>
+			    </Row> */}
 
                 <Row className="row">
 			        <Col className="col" sm={2}></Col>
@@ -24,7 +24,7 @@ class AdminBarang extends React.Component {
 						<h2 className="judulPage" >
 				    	    List Barang
 				        </h2>
-							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" >Add New</button>
+							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" href="bukalapak.com" >Add New</button>
     						<table class="table table-striped" id="mytable">
                                 <thead className="kepala">
                                     <tr>
