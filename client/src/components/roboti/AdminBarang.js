@@ -8,19 +8,24 @@ class AdminBarang extends React.Component {
 		return ( 
 			<>
 			<Container className="ListBarang" id="barang">
-                <Row className="row">
+                {/* <Row className="row">
 			        <Col className="col">
-				        <h2 className="judulPage" >
-				    	    List Barang
-				        </h2>
+						<hr/>
 				        <hr/>
 			        </Col>
-			    </Row>
+			    </Row> */}
 
                 <Row className="row">
 			        <Col className="col" sm={2}></Col>
 			            <Col className="col" sm={8}>
-                            <table className="table table-sm table-bordered" id="ListBarang">
+						<hr/>
+				        <hr/><hr/>
+				        <hr/>	
+						<h2 className="judulPage" >
+				    	    List Barang
+				        </h2>
+							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add New</button>
+    						<table class="table table-striped" id="mytable">
                                 <thead className="kepala">
                                     <tr>
                                         <th scope="col">No</th> {/*cardI, cardImg, cardItem, cardTitle, cardHarga*/}
@@ -32,13 +37,27 @@ class AdminBarang extends React.Component {
                                 </thead>
 								<tbody id="tampil_data">
 									{/* tempat isi data nanti */}
-
+									{/* {{#each results}} */}
+										<tr>
+											<td>1</td>
+											<td>Kurma</td>
+											<td>7000</td>
+											<td>foto kurma</td>
+											<td>
+											<a href="#" class="btn btn-sm btn-info edit" data-id="{{ product_id }}" data-product_name="{{ product_name }}" data-product_price="{{ product_price }}">Edit</a>
+											<a href="#" class="btn btn-sm btn-danger delete" onclick="return confirm('Are you sure you want to delete?')" data-id="{{ product_id }}">Delete</a>
+											</td>
+										</tr>
+									{/* {{/each}} */}
 								</tbody>
                             </table>
 			            </Col>
 			        <Col className="col" sm={2}></Col>
 			    </Row>
 
+
+				{/* modal form */}
+				
             </Container>
 			</>
 		)
