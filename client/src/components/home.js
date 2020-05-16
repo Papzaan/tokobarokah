@@ -2,9 +2,9 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 import {Jumbotron} from 'react-bootstrap'
 import {Pagination, Container, Row, Col, Card, Form, FormControl} from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
-import banner from '../assets/banner2.png'
+import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCartPlus} from '@fortawesome/free-solid-svg-icons'
+import banner from '../assets/bannerfix.png'
 import halal from '../assets/halal.png'
 import kualitas from '../assets/kualitas.png'
 import murah from '../assets/murah.png'
@@ -12,10 +12,8 @@ import sukari from '../assets/sukari.png'
 import habbat from '../assets/habbat.png'
 import almond from '../assets/almond.jpg'
 import himalaya from '../assets/himalaya.png'
-import oil from '../assets/olive oil.jpg'
 import madu from '../assets/madusarang.jpg'
 import ajwa from '../assets/kurmaajwa.png'
-import kismis from '../assets/kismis.png'
 import StarRating from './StarRating'
 
 class Home extends React.Component {
@@ -25,7 +23,15 @@ class Home extends React.Component {
 			<>
 			{/* Start jumbotron*/}
 
-			<Jumbotron className="jumbohome"></Jumbotron>
+			<Container fluid className="bannerContaint">
+				<Row>
+					<Col>
+						<img src={banner} className="banner" />
+					</Col>
+				</Row>
+			</Container>
+
+			
 			
 			{/* End Jumbotron*/}
 
