@@ -24,7 +24,7 @@ class AdminBarang extends React.Component {
 						<h2 className="judulPage" >
 				    	    List Barang
 				        </h2>
-							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" href="bukalapak.com" >Add New</button>
+							<a class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" href="AdminAddBarang" >Add New</a>
     						<table class="table table-striped" id="mytable">
                                 <thead className="kepala">
                                     <tr>
