@@ -8,7 +8,7 @@ import About from './components/about';
 import Navigation from './components/navbar'
 import Footer from './components/footer'
 import Cart from './components/my_cart'
-
+import AdminBarang from './components/roboti/AdminBarang'
 
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
@@ -27,6 +27,7 @@ ReactDOM.render(
 		<Route exact path="/contact" component={Contact} />
 		<Route exact path="about" component={Home} />
 		<Route exact path="/my_cart" component={Cart} />
+		<Route exact path="/roboti/AdminBarang" component={AdminBarang} />
 
 		<Footer/>
 	
