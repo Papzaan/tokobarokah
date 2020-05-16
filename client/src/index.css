@@ -4,10 +4,9 @@
 body {
   
   background-color: white;
-  position: relative;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  
+  height: 100%;
 }
 
 .navbar {
@@ -21,15 +20,16 @@ body {
 
 .abrand {
 	color: black;
-	font-size: 115%;
+	font-size: 135%;
 	font-family: Viga;
 }
 
 .navbar-nav > a {
 	color: black;
 	font-family: Viga;
-	font-size: 108%;
-	float: right;
+	font-size: 130%;
+	width: 50%;
+	padding-right: 5%;
 }
 
 .navbar-nav > a:hover {
@@ -38,14 +38,18 @@ body {
 }
 
 .navbar-nav >a.navbar-nav-active {
-	color: white;
-	text-decoration: underline;
+	color: black;
 	font-family: Viga;
+	background-color:  white;
 }
 
 .navcart {
-	width: 8%;
-	float: right;
+	width: 38px;
+	margin-left: 29%;
+}
+
+.navbar-nav > img.navbar-nav-active {
+	background-color: white;
 }
 
 .jumbohome {
@@ -53,13 +57,15 @@ body {
 	background-size: cover;
 	height: 95vh;
 	box-shadow: 7px 2px 4px rgba(0,0,0,0.5);
-	margin-top:3%;
+	margin-top:4%;
 }
 
 .aboutContain {
-	background-color: #999;
+	background-color: #73C0B0 ;
 	border-radius: 2%;
-	box-shadow: 5px 7px 3px rgba(0,0,0,0.6)
+	box-shadow: 5px 7px 3px rgba(0,0,0,0.6);
+	margin-top:40px;
+	padding: 2%;
 }
 
 .judulPage {
@@ -67,10 +73,11 @@ body {
 	color: black;
 	text-align: center;
 	margin-top: 1%;
+
 }
 
-hr {
-	width: 20%;
+.hrJudul {
+	width: 280px;
 	border-top: 3px solid black;
 	margin-bottom: 7%;
 }
@@ -80,110 +87,93 @@ hr {
  color: black;
  text-align: center;
  font-weight: bold;
- font-size: 20px;
+ font-size: 25px;
  word-spacing: 7px;
  letter-spacing: 1px;
  margin-bottom: 7%;
-}
-
-.halal{
-	padding-top: 4%;
-	width: 40%;
-	height: 22vh;
-	float: right;
-}
-
-.kualitas{
-	width: 45%;
-	height: 25vh;
-	float: left;
-	margin-left: 1%;
-
-}
-
-.murah{
-	padding-top: 5%;
-	width: 39%;
-	height: 23vh;
-	display: block;
-	margin: auto;
-}
-
-.pLabel1 {
-	 font-family: Patrick Hand;
-	 color: black;
-	 float: right;
-	 font-weight: bold;
-	 font-size: 25px;
-	 margin-bottom: 30%;
-	 margin-right: 5%;
-}
-.pLabel2 {
-	 font-family: Patrick Hand;
-	 color: black;
-	 text-align: center;
-	 font-weight: bold;
-	 font-size: 25px;
-	 margin-bottom: 30%;
-}
-.pLabel3 {
-	 font-family: Patrick Hand;
-	 color: black;
-	 text-align: left;
-	 font-weight: bold;
-	 font-size: 25px;
-	 margin-bottom: 30%;
-
+ margin-right: 5%;
+ margin-left: 5%;
 }
 
 .productContain {
-	background-color: #a9c4b0;
-	margin-top: 1%;
-	border-radius: 2%;
-	box-shadow: 5px 7px 3px rgba(0,0,0,0.6)
+	background-color: #27A973;
+	margin-top: 2%;
+	border-radius: 25px;
+	box-shadow: 5px 7px 3px rgba(0,0,0,0.6);
+	margin-top:45px;
+	padding: 2%;
 }
 
 .cardItem {
-	width: 80%;
-	height: 20vh;
+
+	height: 230px;
 }
 
 .cardImg{
-	width: 80%;
-	height: 30vh;
-	display: block;
-	margin: auto;
-	margin-top: 3%;
-	border-radius: 10%;
+	width: 100%;
+	height: 100%;
+	margin-top: 1px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 }
 
 .cardImg:hover{
-	transform: scale(1.5);
+	transform: scale(1.1);
 	display: block;
 	margin: auto;
 	margin-top: 3%;
-	border-radius: 10%;
+	border-radius: 25px;
 	box-shadow: 5px 5px 3px rgba(0,0,0,0.6)
 }
 
 .cardI {
-	margin-bottom: 30%;
-	box-shadow: 5px 5px 3px rgba(0,0,0,0.6);
-	border-radius: 5%;
+	margin-bottom: 10%;
+	box-shadow: 4px 6px 3px rgba(0,0,0,0.6);
+	border-radius: 25px;
+	width: 320px;
 }
 
 .cardTitle {
 	font-family: Patrick Hand;
 	color: black;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 29px;
 }
 
 .cardHarga{
 	font-family: Patrick Hand;
 	color: red;
+	font-size: 24px;
+	height: 85vh;
+	width: 100%;
+	font-weight: bold;
+}
+.stock{
+	font-family: Patrick Hand;
+	color: black;
+}
+.Tstok {
+	float: right;
+	color: black;
+}
+.btnPesan {
+	width: 95%;
+	background-color: #f70d1a;
+	font-family: Viga;
 	font-size: 18px;
-	height: 15vh;
+}
+.cartplus {
+	color: #333;
+	padding-left: 5px;
+}
+
+.star {
+	cursor: pointer;
+	transition: color 100ms;
+}
+
+input[type="radio"] {
+	display: none;
 }
 
 .formSearch{
@@ -209,10 +199,112 @@ hr {
 
 }
 
+.teamContain {
+	border-radius: 25px;
+	background-color: #27A973;
+	box-shadow: 5px 7px 3px rgba(0,0,0,0.6);
+	margin-top:110px;
+	padding: 2%;
+}
+
+.teamJudul {
+	font-family: Viga;
+	color: black;
+	text-align: center;
+	margin-top: 2%;
+}
+
+.imgTeam{
+	width: 220px;
+	height: 220px;
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+	border-radius: 100%;
+}
+
+.imgTeam:hover{
+	transform: scale(1.5);
+	display: block;
+	margin: auto;
+	margin-top: 3%;
+	border-radius: 10%;
+	box-shadow: 5px 5px 3px rgba(0,0,0,0.6)
+}
+
+.cardTeam {
+	margin-bottom: 30%;
+	box-shadow: 5px 5px 3px rgba(0,0,0,0.6);
+	border-radius: 25px;
+	background-color: #E9E2CE;
+	width: 325px;
+}
+
+.titleTeam {
+	font-family: Patrick Hand;
+	color: black;
+	font-weight: bold;
+	font-size: 31px;
+}
+
+.infoTeam > h4{
+	font-family: Patrick Hand;
+	color: #333;
+	font-size: 28px;
+	height: 15vh;
+}
+
+
+.iconIg {
+	color: #C13584;
+	margin-right: 35px;
+	margin-left: 60px;
+}
+
+.iconLinked {
+	color: #000080;
+	margin-right: 35px;
+}
+
+.iconGit {
+	color: black;
+
+}
+
+.contactJudul {
+	font-family: Viga;
+	color: black;
+	margin-top: 2%;
+}
+
+.hrContact {
+	float: left;
+	border-top: 3px solid #555;
+	width: 510px;
+}
+
+.labelContact{
+	font-family: Patrick Hand;
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.isiLabel {
+	font-family: Patrick Hand;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+.btnContact {
+	margin-bottom: 7%;
+}
+
 .footer {
 	background-color: #00b14f;
 	box-shadow: -5px -5px 3px rgba(0,0,0,0.6);
-	margin-top: 5%;
+	bottom: 0;
+  	margin-top: 170px;
 }
 
 .pFooter {
@@ -220,7 +312,7 @@ hr {
 	color: black;
 	text-align: center;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top: 2%;
 	margin-bottom: 2%;
 	word-spacing: 5px;
