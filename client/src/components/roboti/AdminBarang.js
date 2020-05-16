@@ -8,12 +8,12 @@ class AdminBarang extends React.Component {
 		return ( 
 			<>
 			<Container className="ListBarang" id="barang">
-                {/* <Row className="row">
+                <Row className="row">
 			        <Col className="col">
 						<hr/>
 				        <hr/>
 			        </Col>
-			    </Row> */}
+			    </Row>
 
                 <Row className="row">
 			        <Col className="col" sm={2}></Col>
@@ -24,7 +24,7 @@ class AdminBarang extends React.Component {
 						<h2 className="judulPage" >
 				    	    List Barang
 				        </h2>
-							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add New</button>
+							<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" >Add New</button>
     						<table class="table table-striped" id="mytable">
                                 <thead className="kepala">
                                     <tr>
@@ -32,6 +32,7 @@ class AdminBarang extends React.Component {
                                         <th scope="col">Nama Barang</th>
                                         <th scope="col">Harga Barang</th>
                                         <th scope="col">Img Barang</th>
+										<th scope="col">Stok Barang</th>
 										<th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -43,9 +44,10 @@ class AdminBarang extends React.Component {
 											<td>Kurma</td>
 											<td>7000</td>
 											<td>foto kurma</td>
+											<td>30</td>
 											<td>
-											<a href="#" class="btn btn-sm btn-info edit" data-id="{{ product_id }}" data-product_name="{{ product_name }}" data-product_price="{{ product_price }}">Edit</a>
-											<a href="#" class="btn btn-sm btn-danger delete" onclick="return confirm('Are you sure you want to delete?')" data-id="{{ product_id }}">Delete</a>
+											<a href="#" class="btn btn-sm btn-info edit">Edit</a>
+											<a href="#" class="btn btn-sm btn-danger delete">Delete</a>
 											</td>
 										</tr>
 									{/* {{/each}} */}

@@ -9,6 +9,7 @@ import Navigation from './components/navbar'
 import Footer from './components/footer'
 import Cart from './components/my_cart'
 import AdminBarang from './components/roboti/AdminBarang'
+import AdminAddBarang from './components/roboti/AdminAddBarang'
 
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
@@ -17,7 +18,6 @@ import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
  	
-
 	<Router>
 
 		<Navigation/>
@@ -28,6 +28,7 @@ ReactDOM.render(
 		<Route exact path="about" component={Home} />
 		<Route exact path="/my_cart" component={Cart} />
 		<Route exact path="/roboti/AdminBarang" component={AdminBarang} />
+		<Route exact path="/roboti/AdminAddBarang" component={AdminAddBarang} />
 
 		<Footer/>
 	
