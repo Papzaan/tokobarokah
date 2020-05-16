@@ -5,7 +5,7 @@
 2. NPM (16.3.4)
 3. MongoDB (4.2.6)
 
-####  How to run this code
+####  Cara menjalankan Code ini
 1. Pastikan MongoDB berjalan di sistem Anda
 2. Kloning repositori ini
 3. Perbarui config / config.js dengan nilai tes Anda untuk Key API Stripe dan ID Klien Stripe Connect
