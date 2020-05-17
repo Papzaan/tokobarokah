@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Container, Row, Col, Card, Form, Button} from 'react-bootstrap'
-import Input from 'antd';
+import { Input } from 'antd';
 import 'antd/dist/antd.css';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
@@ -42,7 +42,6 @@ function AdminAddBarang(props) {
         }
 
         const variables = {
-            writer: props.user.userData._id,
             title: TitleValue,
             description: DescriptionValue,
             price: PriceValue,
@@ -115,15 +114,6 @@ function AdminAddBarang(props) {
 					    </Form.Label>
 					    <Col md={4}>
 						<Input onChange={onSoldChange} value={SoldValue}/>
-					    </Col>
-					</Form.Group>
-					
-					<Form.Group as={Row} controlId="imgbrg">
-					    <Form.Label column md={2} className="labelimg">
-					      Masukan Gambar Barang
-					    </Form.Label>
-					    <Col md={4}>
-					      <Form.Control type="file" className="isifile" id="img" name="img" />
 					    </Col>
 					</Form.Group>
 
