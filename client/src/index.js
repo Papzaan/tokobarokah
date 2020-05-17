@@ -17,7 +17,7 @@ import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import '~antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
  	
