@@ -1,11 +1,67 @@
-// halaman untuk tambah barang
-//cardI, cardImg, cardItem, cardTitle, cardHarga
-import React from 'react';
+import React, { useState } from 'react';
 import {Container, Row, Col, Card, Form, Button} from 'react-bootstrap'
-class AdminAddBarang extends React.Component {
+//import FileUpload from '../../utils/FileUpload'
+import Axios from 'axios';
 
-	render() {
-		return ( 
+function AdminAddBarang(props) {
+	const [TitleValue, setTitleValue] = useState("")
+    const [DescriptionValue, setDescriptionValue] = useState("")
+    const [PriceValue, setPriceValue] = useState(0)
+    const [SoldValue, setSoldValue] = useState(1)
+
+	const [Images, setImages] = useState([])
+	
+	const onTitleChange = (event) => {
+        setTitleValue(event.currentTarget.value)
+    }
+
+    const onDescriptionChange = (event) => {
+        setDescriptionValue(event.currentTarget.value)
+    }
+
+    const onPriceChange = (event) => {
+        setPriceValue(event.currentTarget.value)
+    }
+
+    const onSoldChange = (event) => {
+        setSoldValue(event.currentTarget.value)
+    }
+
+    const updateImages = (newImages) => {
+        setImages(newImages)
+    }
+    const onSubmit = (event) => {
+        event.preventDefault();
+
+
+        if (!TitleValue || !DescriptionValue || !PriceValue ||
+            !SoldValue || !Images) {
+            return alert('fill all the fields first!')
+        }
+
+        const variables = {
+            writer: props.user.userData._id,
+            title: TitleValue,
+            description: DescriptionValue,
+            price: PriceValue,
+            images: Images,
+            sold: SoldValue,
+        }
+
+        Axios.post('/api/product/uploadProduct', variables)
+            .then(response => {
+                if (response.data.success) {
+                    alert('Product Successfully Uploaded')
+                    props.history.push('/')
+                } else {
+                    alert('Failed to upload Product')
+                }
+            })
+
+    }
+
+	return (
+		<div>
 			<>
 			<Container className="AddBrg" id="id_formbrg">
 				<Row className="row">
@@ -23,13 +79,22 @@ class AdminAddBarang extends React.Component {
 				    </Col>
 				</Row>
 
-				<Form className="namabrg">
+				<Form onSubmit={onSubmit} >
 				 	<Form.Group as={Row} controlId="namabrg">
 					    <Form.Label column md={2} className="labelnama">
 					      Nama Barang
 					    </Form.Label>
 					    <Col md={4}>
 					      <Form.Control type="text" placeholder="Nama barang" className="isiLabel" />
+					    </Col>
+					</Form.Group>
+
+					<Form.Group as={Row} controlId="deskripsi">
+					    <Form.Label column md={2} className="labelnama">
+					      Deskripsi
+					    </Form.Label>
+					    <Col md={4}>
+					      <Form.Control type="text" placeholder="Deskripsi" className="isiLabel" />
 					    </Col>
 					</Form.Group>
 
@@ -71,8 +136,8 @@ class AdminAddBarang extends React.Component {
 				</Row>
             </Container>
 			</>
-		)
-	}
+		</div>
+	)
 }
 
-export default AdminAddBarang;
+export default AdminAddBarang
